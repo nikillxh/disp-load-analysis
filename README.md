@@ -1,5 +1,9 @@
 # Displacement-controlled Loading Analysis
 
+## Report and 
+[Report on Analysis of Stress Distribution](./REPORT.md)
+[Problem Statement](./Problem_Statement.pdf)
+
 ## Overview
 This project analyzes displacement-controlled loading of materials using data-driven approaches. The workflow involves three main steps:
 1. **Polynomial Regression:** Generate polynomial equations for displacement components (`u_x` and `u_y`) using `polynomial.py`.
@@ -62,6 +66,3 @@ This project analyzes displacement-controlled loading of materials using data-dr
 
 3. Stress Distribution:
     - Scatter plots for σ_xx, σ_yy, and σ_xy.
-
-## Report and 
-[Analysis of Stress Distribution](./REPORT.md)
