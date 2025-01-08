@@ -1,8 +1,8 @@
 # Displacement-controlled Loading Analysis
 
-## Report and 
-[Report on Analysis of Stress Distribution](./REPORT.md)
-[Problem Statement](./Problem_Statement.pdf)
+## Report and Problem Statement
+1. [Report on Analysis of Stress Distribution](./REPORT.md)
+2. [Problem Statement](./Problem_Statement.pdf)
 
 ## Overview
 This project analyzes displacement-controlled loading of materials using data-driven approaches. The workflow involves three main steps:
