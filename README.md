@@ -62,3 +62,6 @@ This project analyzes displacement-controlled loading of materials using data-dr
 
 3. Stress Distribution:
     - Scatter plots for σ_xx, σ_yy, and σ_xy.
+
+## Report and 
+[Analysis of Stress Distribution](./REPORT.md)
