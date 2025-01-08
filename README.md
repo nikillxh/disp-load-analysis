@@ -185,7 +185,7 @@ Find ( $\mu_x$ ) and ( $\mu_y$ ) using polynomial regression.
 
 ### Minimize:
 $$
-\sum_{i=1}^N \left( \text{residual\_u}_x(x_i, y_i; d_1, \mu_x)^2 + \text{residual\_u}_y(x_i, y_i; d_1, \mu_y)^2 \right)
+\sum_{i=1}^N \left( \text{residual\_u}_x(x_i, y_i; \lambda_x, \mu_x)^2 + \text{residual\_u}_y(x_i, y_i; \lambda_y, \mu_y)^2 \right)
 $$
 $$+$$
 $$
