@@ -184,17 +184,7 @@ $$
 Find ( $\mu_x$ ) and ( $\mu_y$ ) using polynomial regression.
 
 ### Minimize:
-$$
-\sum_{i=1}^N \left( \text{residual\_u}_x(x_i, y_i; \lambda_x, \mu_x)^2 + \text{residual\_u}_y(x_i, y_i; \lambda_y, \mu_y)^2 \right)
-$$
-$$+$$
-$$
-(x=x_1) \left[ \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y} + 2\mu_x \frac{\partial u_x}{\partial x} - \text{abs}(R_{4}) \right]^2 \times 100 \quad \text{(penalty)}
-$$
-$$+$$
-$$
-(y=y_1) \left[ \frac{\partial u_x}{\partial x} + \frac{\partial u_y}{\partial y} + 2\mu_y \frac{\partial u_y}{\partial y} - \text{abs}(R_{1}) \right]^2 \times 100 \quad \text{(penalty)}
-$$
+![Minimize](./img/minimize.png "Minimize")
 
 ### Physical Constraints:
 $$
