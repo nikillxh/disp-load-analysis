@@ -1,4 +1,71 @@
 # Displacement-controlled Loading Analysis
+
+## Overview
+This project analyzes displacement-controlled loading of materials using data-driven approaches. The workflow involves three main steps:
+1. **Polynomial Regression:** Generate polynomial equations for displacement components (`u_x` and `u_y`) using `polynomial.py`.
+2. **Optimization:** Calculate Lamé constants (`λ` and `μ`) and minimize the cost function using `lameconstant.py`.
+3. **Stress Visualization:** Plot stress variation (`σ_xx`, `σ_yy`, `σ_xy`) for the material using `distribution.py`.
+
+## File Descriptions
+
+1. `polynomial.py`
+    - **Purpose:** Perform polynomial regression on displacement data to model `u_x` and `u_y`.
+    - **Key Outputs:**
+        - Polynomial equations for `u_x` and `u_y`.
+        - Prediction vs. Actual plots for displacement components.
+
+
+2. `lameconstant.py`
+    - **Purpose:** Optimize Lamé constants (`λ` and `μ`) based on Navier’s equations and boundary constraints.
+    - **Key Outputs:**
+        - Optimized Lamé constants.
+        - Cost function value for training and test datasets.
+
+3. `distribution.py`
+    - **Purpose:** Visualize stress variations (`σ_xx`, `σ_yy`, `σ_xy`) across the material.
+    - **Key Outputs:**
+        - Scatter plots for stress components at various points.
+
+4. `main.py`
+    - **Purpose:** Integrates the workflow for all five datasets in the `data/` directory.
+    - **Steps:**
+        1. Call `polynomial_obtain` to compute `u_x` and `u_y`.
+        2. Optimize Lamé constants using `lame_constants`.
+        3. Plot stress distributions for each dataset.
+
+
+## How to Run
+
+1. **Ensure Dependencies Are Installed:**
+   ```bash
+   pip install -r requirements.txt
+    ```
+2. **Place Data in the data/ Directory:**
+
+    Each subfolder (e.g., 1, 2, ...) should contain:
+    - displacement_data.csv
+    - reaction_data.csv
+
+3. **Run the Main Script:**
+    ```bash
+   python main.py
+    ```
+
+## Outputs
+
+1. Polynomial Regression:
+    - Equations for u_x and u_y.
+    - Prediction vs. Actual plots.
+
+2. Lamé Constants Optimization:
+    - Optimized values of λ and μ.
+
+3. Stress Distribution:
+    - Scatter plots for σ_xx, σ_yy, and σ_xy.
+
+---
+
+# Report
 ## Derivation of Governing Equations
 ### Displacement Field and Strain Components
 
@@ -114,7 +181,7 @@ $$
 
 ## Objective Function
 
-Find \( \mu_x \) and \( \mu_y \) using polynomial regression.
+Find ( $\mu_x$ ) and ( $\mu_y$ ) using polynomial regression.
 
 ### Minimize:
 $$
@@ -148,3 +215,62 @@ $$
 9. **Evaluate** by:  
    - Optimizing on training data.  
    - Calculating the objective function and checking the fit.
+
+---
+
+## Nelder-Mead Algorithm
+
+**If** \( f(R) < f(G) \), **then** perform **Case(i)** (Reflect/Expand)  
+**Else** perform **Case(ii)** (Contract/Shrink)
+
+### Case(i)
+
+**Begin {Case(i)}**
+
+1. **If** \( f(B) < f(R) \),  
+   **then** replace \( W \) with \( R \).  
+2. **Else**:
+   - Compute \( E \) and \( f(E) \).
+   - **If** \( f(E) < f(B) \),  
+     **then** replace \( W \) with \( E \).  
+   - **Else**, replace \( W \) with \( R \).
+   - **End if**
+
+**End {Case(i)}**
+
+
+### Case(ii)
+
+**Begin {Case(ii)}**
+
+1. **If** \( f(R) < f(W) \),  
+   **then** replace \( W \) with \( R \).  
+   Compute \( C \) as:
+   - \( C = (W + M)/2 \),  
+   - or \( C = (M + R)/2 \),  
+     and \( f(C) \).
+
+2. **If** \( f(C) < f(W) \),  
+   **then** replace \( W \) with \( C \).  
+3. **Else**:
+   - Compute \( S \) and \( f(S) \).  
+   - Replace \( W \) with \( S \).  
+   - Replace \( G \) with \( M \).
+4. **End if**
+
+**End {Case(ii)}**
+
+---
+
+## Distribution Graphs
+
+1. **Stress Distribution for n = 1**
+![Stress Distribution for n = 1](./img/distribution_1.png "Stress Distribution for n = 1")
+2. **Stress Distribution for n = 2**
+![Stress Distribution for n = 2](./img/distribution_2.png "Stress Distribution for n = 2")
+3. **Stress Distribution for n = 3**
+![Stress Distribution for n = 3](./img/distribution_3.png "Stress Distribution for n = 3")
+4. **Stress Distribution for n = 4**
+![Stress Distribution for n = 4](./img/distribution_4.png "Stress Distribution for n = 4")
+5. **Stress Distribution for n = 5**
+![Stress Distribution for n = 5](./img/distribution_5.png "Stress Distribution for n = 5")
