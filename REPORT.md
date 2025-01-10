@@ -197,3 +197,6 @@ $$
 ![Stress Distribution for n = 4](./img/distribution_4.png "Stress Distribution for n = 4")
 5. **Stress Distribution for n = 5**
 ![Stress Distribution for n = 5](./img/distribution_5.png "Stress Distribution for n = 5")
+
+## Author
+**Nikhileshwaran**
