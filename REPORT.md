@@ -199,4 +199,5 @@ $$
 ![Stress Distribution for n = 5](./img/distribution_5.png "Stress Distribution for n = 5")
 
 ## Author
-**Nikhileshwaran**
+- **Nikhileshwaran** -> [nikillxh](https://github.com/nikillxh)
+- **Dixansh** -> [IronX10](https://github.com/IronX10)
