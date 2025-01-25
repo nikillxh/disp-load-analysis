@@ -185,6 +185,26 @@ $$
 
 ---
 
+## Data Patterns / Analysis
+### Data Distribution Plots
+1. **Displacement vs Coordinate for n = 1**
+![Displacement vs Coordinate for n = 1](./img/disp_coordinate_1.jpg "Displacement vs Coordinate for n = 1")
+2. **Displacement vs Coordinate for n = 2**
+![Displacement vs Coordinate for n = 2](./img/disp_coordinate_2.jpg "Displacement vs Coordinate for n = 2")
+3. **Displacement vs Coordinate for n = 3**
+![Displacement vs Coordinate for n = 3](./img/disp_coordinate_3.jpg "Displacement vs Coordinate for n = 3")
+4. **Displacement vs Coordinate for n = 4**
+![Displacement vs Coordinate for n = 4](./img/disp_coordinate_4.jpg "Displacement vs Coordinate for n = 4")
+5. **Displacement vs Coordinate for n = 5**
+![Displacement vs Coordinate for n = 5](./img/disp_coordinate_5.jpg "Displacement vs Coordinate for n = 5")
+
+### Observation on Data
+1. The datasets used in this analysis are proportional to each other, which implies that the overall distribution pattern of the stresses remains consistent across different datasets. However, while the shape of the contours is similar, the intensity of the stress varies based on the specific scaling of the dataset. This variation is depicted in the contour plots through the color range, which adjusts to reflect the magnitude of the stress. Thus, even though the contours' shapes are similar, the color gradients highlight differences in the stress intensity for each dataset.
+
+2. The generated contour plots for the stress components (σₓₓ, σᵧᵧ, and τₓᵧ) provide a clear visualization of the stress distribution across the plate with an elliptic hole. These plots are instrumental in understanding how the applied loading conditions affect the mechanical behavior of the structure. The contours illustrate regions of high and low stress concentration, enabling a more intuitive assessment of where the plate might experience potential failure or deformation.
+
+---
+
 ## Distribution Graphs
 
 1. **Stress Distribution for n = 1**
